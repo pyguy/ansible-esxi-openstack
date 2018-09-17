@@ -14,6 +14,12 @@ You can simply use pip to install (and define) a stable version:
 pip install ansible==2.6.3
 ```
 
+Also you need to have vagrant plugin for `vsphere` installed  
+```sh
+vagrant plugin install vagrant-vmware-esxi
+vagrant plugin list
+vagrant version
+ ```
 
 Role Variables
 --------------
@@ -21,8 +27,10 @@ Role Variables
 ```sh
 ansible-galaxy install pyguy.esxi-openstack
 ```
-
-
+to run vagrant test:
+```sh
+vagrant up --provider=vmware_esxi
+```
 Dependencies
 ------------
 
